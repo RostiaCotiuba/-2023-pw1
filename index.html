@@ -1,34 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Таск-менеджер</title>
+  <title>Планировщик задач</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <h1>Таск-менеджер</h1>
-
-  <div id="task-form">
-    <h2>Добавить задачу</h2>
-    <input type="text" id="task-name" placeholder="Название задачи">
-    <textarea id="task-description" placeholder="Описание задачи"></textarea>
-    <select id="task-priority">
+  <h1>Планировщик задач</h1>
+  
+  <div id="taskForm">
+    <input type="text" id="taskInput" placeholder="Введите задачу">
+    <input type="text" id="taskDescription" placeholder="Описание задачи">
+    <select id="taskPriority">
       <option value="low">Низкий приоритет</option>
       <option value="medium">Средний приоритет</option>
       <option value="high">Высокий приоритет</option>
     </select>
-    <button id="add-task-btn">Добавить</button>
+    <button id="addTaskButton">Добавить задачу</button>
   </div>
-
-  <div id="task-list">
-    <h2>Список задач</h2>
-    <div id="filter-buttons">
-      <button class="filter-btn" data-priority="all">Все</button>
-      <button class="filter-btn" data-priority="low">Низкий приоритет</button>
-      <button class="filter-btn" data-priority="medium">Средний приоритет</button>
-      <button class="filter-btn" data-priority="high">Высокий приоритет</button>
-    </div>
-    <ul id="tasks"></ul>
-  </div>
+  
+  <ul id="taskList"></ul>
 
   <script src="script.js"></script>
 </body>
