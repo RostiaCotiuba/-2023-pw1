@@ -1,11 +1,9 @@
-// Получаем элементы из DOM
 const taskInput = document.getElementById('taskInput');
 const taskDescription = document.getElementById('taskDescription');
 const taskPriority = document.getElementById('taskPriority');
 const addTaskButton = document.getElementById('addTaskButton');
 const taskList = document.getElementById('taskList');
 
-// Обработчик события для добавления задачи
 function addTask() {
   const taskText = taskInput.value;
   const taskDesc = taskDescription.value;
@@ -50,10 +48,8 @@ function addTask() {
   
   taskList.appendChild(taskItem);
   
-  // Очищаем поля ввода задачи
   taskInput.value = '';
   taskDescription.value = '';
 }
 
-// Добавляем обработчик события для нажатия кнопки "Добавить задачу"
 addTaskButton.addEventListener('click', addTask);
